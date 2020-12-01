@@ -9,10 +9,12 @@ body {
 }
 
 main {
+    margin-top: 4rem;
+    margin-left: 4rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 0px;
+    grid-column-gap: 2rem;
     grid-row-gap: 0px;
 }
 
@@ -28,6 +30,12 @@ header img {
 }
 
 h2 {
+    display: block;
+    width: 30%;
+    margin: 0 auto;
+    background-color: #1B1D72;
+    position: relative;
+    top: 20px;
     font-weight: 400;
     text-align: center;
 }
@@ -67,6 +75,7 @@ button {
 }
 
 .box {
+    padding: 2rem 1rem;
     border: #1AD475 solid 2px;
 }
 
@@ -94,4 +103,32 @@ button {
 .chat__wrapper { 
     grid-area: 1 / 3 / 2 / 4; 
     width: 600px;
+}
+
+.chat__input {
+    padding-top: 1rem;
+    display: flex;
+    align-items: baseline;
+}
+
+.chat__goggurinn {
+    color: #FF1494;
+}
+
+.chat__input > input {
+    flex-grow: 3;
+    background-color: #1B1D72;
+    caret-color: #1AD475;
+    border: none;
+    margin-right: 1rem;
+    margin-left: 0.2rem;
+    font-size: 16px;
+}
+
+.chat__input > input:focus {
+    outline-width: 0;
+}
+
+.chat__input > button {
+
 }
