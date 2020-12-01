@@ -1,8 +1,14 @@
+import React from 'react';
+import Currency from './components/Currency';
+import News from './components/News';
+
 function App() {
   return (
-        <p>
-          Cryptic Stuff
-        </p>
+
+    <div>
+      <Currency />
+      <News />
+    </div>
   );
 }
 
