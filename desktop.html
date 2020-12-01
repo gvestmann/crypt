@@ -6,6 +6,9 @@
     <meta name="description" content="Web site created using create-react-app"/>
     <title>Crypto Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <div id="root">
@@ -14,98 +17,102 @@
         </header>
         <main>
             <div class="stories__wrapper">
-                <h2>NEWSFEED</h2>
-                <ul>
-                    <li><span class="stories__timestamp">[1/12]</span><a href="#">California is Leading the Future of America’s Crypto Economy</a></li>
-                    <li><span class="stories__timestamp">[1/12]</span><a href="#">Will Crypto Surpass Gold as a Reserve Currency?</a></li>
-                    <li><span class="stories__timestamp">[1/12]</span><a href="#">Bitcoin Halving: How Miners Are Faring So Far</a></li>
-                    <li><span class="stories__timestamp">[1/12]</span><a href="#">Understanding the Cyber-security Risk of Bitcoin</a></li>
-                    <li><span class="stories__timestamp">[1/12]</span><a href="#">California is Leading the Future of America’s Crypto Economy</a></li>
-                    <li><span class="stories__timestamp">[1/12]</span><a href="#">California is Leading the Future of America’s Crypto Economy</a></li>
-                    <li><span class="stories__timestamp">[1/12]</span><a href="#">Will Crypto Surpass Gold as a Reserve Currency?</a></li>
-                    <li><span class="stories__timestamp">[1/12]</span><a href="#">Bitcoin Halving: How Miners Are Faring So Far</a></li>
-                    <li><span class="stories__timestamp">[1/12]</span><a href="#">Understanding the Cyber-security Risk of Bitcoin</a></li>
-                    <li><span class="stories__timestamp">[1/12]</span><a href="#">California is Leading the Future of America’s Crypto Economy</a></li>
-                </ul>
+                <h2 class="headline">NEWSFEED</h2>
+                <div class="stories__stories box">
+                    <ul>
+                        <li><span class="stories__timestamp">[1/12]</span><a href="#">California is Leading the Future of America’s Crypto Economy</a></li>
+                        <li><span class="stories__timestamp">[1/12]</span><a href="#">Will Crypto Surpass Gold as a Reserve Currency?</a></li>
+                        <li><span class="stories__timestamp">[1/12]</span><a href="#">Bitcoin Halving: How Miners Are Faring So Far</a></li>
+                        <li><span class="stories__timestamp">[1/12]</span><a href="#">Understanding the Cyber-security Risk of Bitcoin</a></li>
+                        <li><span class="stories__timestamp">[1/12]</span><a href="#">California is Leading the Future of America’s Crypto Economy</a></li>
+                        <li><span class="stories__timestamp">[1/12]</span><a href="#">California is Leading the Future of America’s Crypto Economy</a></li>
+                        <li><span class="stories__timestamp">[1/12]</span><a href="#">Will Crypto Surpass Gold as a Reserve Currency?</a></li>
+                        <li><span class="stories__timestamp">[1/12]</span><a href="#">Bitcoin Halving: How Miners Are Faring So Far</a></li>
+                        <li><span class="stories__timestamp">[1/12]</span><a href="#">Understanding the Cyber-security Risk of Bitcoin</a></li>
+                        <li><span class="stories__timestamp">[1/12]</span><a href="#">California is Leading the Future of America’s Crypto Economy</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="currencies__wrapper">
-                <h2>EXCHANGE</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Price</th>
-                            <th>Volume (24h)</th>
-                            <th>Change (24h)</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>bitcoin</td>
-                            <td>13230492922.3939685451847754</td>
-                            <td>19395.30</td>
-                            <td>3.72</td>
-                        </tr>
-                        <tr>
-                            <td>bitcoin</td>
-                            <td>13230492922.3939685451847754</td>
-                            <td>19395.30</td>
-                            <td>3.72</td>
-                        </tr>
-                        <tr>
-                            <td>bitcoin</td>
-                            <td>13230492922.3939685451847754</td>
-                            <td>19395.30</td>
-                            <td>3.72</td>
-                        </tr>
-                        <tr>
-                            <td>bitcoin</td>
-                            <td>13230492922.3939685451847754</td>
-                            <td>19395.30</td>
-                            <td>3.72</td>
-                        </tr>
-                        <tr>
-                            <td>bitcoin</td>
-                            <td>13230492922.3939685451847754</td>
-                            <td>19395.30</td>
-                            <td>3.72</td>
-                        </tr>
-                        <tr>
-                            <td>bitcoin</td>
-                            <td>13230492922.3939685451847754</td>
-                            <td>19395.30</td>
-                            <td>3.72</td>
-                        </tr>
-                        <tr>
-                            <td>bitcoin</td>
-                            <td>13230492922.3939685451847754</td>
-                            <td>19395.30</td>
-                            <td>3.72</td>
-                        </tr>
-                        <tr>
-                            <td>bitcoin</td>
-                            <td>13230492922.3939685451847754</td>
-                            <td>19395.30</td>
-                            <td>3.72</td>
-                        </tr>
-                        <tr>
-                            <td>bitcoin</td>
-                            <td>13230492922.3939685451847754</td>
-                            <td>19395.30</td>
-                            <td>3.72</td>
-                        </tr>
-                        <tr>
-                            <td>bitcoin</td>
-                            <td>13230492922.3939685451847754</td>
-                            <td>19395.30</td>
-                            <td>3.72</td>
-                        </tr>
-                    </tbody>
-                </table>    
+                <h2 class="headline">EXCHANGE</h2>
+                <div class="box">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Price</th>
+                                <th>Volume (24h)</th>
+                                <th>Change (24h)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>bitcoin</td>
+                                <td>13230492922.3939685451847754</td>
+                                <td>19395.30</td>
+                                <td>3.72</td>
+                            </tr>
+                            <tr>
+                                <td>bitcoin</td>
+                                <td>13230492922.3939685451847754</td>
+                                <td>19395.30</td>
+                                <td>3.72</td>
+                            </tr>
+                            <tr>
+                                <td>bitcoin</td>
+                                <td>13230492922.3939685451847754</td>
+                                <td>19395.30</td>
+                                <td>3.72</td>
+                            </tr>
+                            <tr>
+                                <td>bitcoin</td>
+                                <td>13230492922.3939685451847754</td>
+                                <td>19395.30</td>
+                                <td>3.72</td>
+                            </tr>
+                            <tr>
+                                <td>bitcoin</td>
+                                <td>13230492922.3939685451847754</td>
+                                <td>19395.30</td>
+                                <td>3.72</td>
+                            </tr>
+                            <tr>
+                                <td>bitcoin</td>
+                                <td>13230492922.3939685451847754</td>
+                                <td>19395.30</td>
+                                <td>3.72</td>
+                            </tr>
+                            <tr>
+                                <td>bitcoin</td>
+                                <td>13230492922.3939685451847754</td>
+                                <td>19395.30</td>
+                                <td>3.72</td>
+                            </tr>
+                            <tr>
+                                <td>bitcoin</td>
+                                <td>13230492922.3939685451847754</td>
+                                <td>19395.30</td>
+                                <td>3.72</td>
+                            </tr>
+                            <tr>
+                                <td>bitcoin</td>
+                                <td>13230492922.3939685451847754</td>
+                                <td>19395.30</td>
+                                <td>3.72</td>
+                            </tr>
+                            <tr>
+                                <td>bitcoin</td>
+                                <td>13230492922.3939685451847754</td>
+                                <td>19395.30</td>
+                                <td>3.72</td>
+                            </tr>
+                        </tbody>
+                    </table>  
+                </div>  
             </div>
             <div class="chat__wrapper">
-                <h2>CHAT</h2>
-                <div class="chat__messages">
+                <h2 class="headline">CHAT</h2>
+                <div class="chat__messages box">
                     <ul>
                         <li><span class="chat__user">14:08 [The Attorney] </span>- When the rabbit bites its tail of, I want you to throw that radio into the tub.</li>
                         <li><span class="chat__user">14:08 [The Attorney] </span>- Fuck, you’ve gone completely  sideways. It will blast you right through the wall. You’ll be dead in 2 seconds.</li>
