@@ -2,6 +2,21 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: thin;
+}
+
+*::-webkit-scrollbar {
+    width: 12px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: #1B1D72;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: #1B1D72;
+    border: 1px solid #1AD475;
+    z-index: 2;
 }
 
 body {
@@ -17,21 +32,12 @@ main {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
-    /* display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-column-gap: 2rem;
-    grid-row-gap: 0px; */
 }
 
 main > div {
     display: flex;
     flex-direction: column;
     margin: 0 1rem;
-}
-
-header { 
-    /* grid-area: 1 / 1 / 2 / 2;  */
 }
 
 header img { 
@@ -96,13 +102,11 @@ button {
     height: 85vh;    
 }
 
-
 .chat__user {
     color: #FF1494;
 }
 
 .stories__wrapper { 
-    /* grid-area: 1 / 2 / 2 / 3;  */
     width: 600px;
 }
 
@@ -118,10 +122,6 @@ button {
 .stories__stories {
     width: 40vw;
 }
-
-/*.stories__single--first {
-    margin-top: 2rem;
-}*/
 
 .stories__single--wrapper:nth-child(2) {
     margin-top: 2rem;
@@ -141,12 +141,10 @@ button {
 }
 
 .currencies__wrapper { 
-    /* grid-area: 2 / 2 / 3 / 3;  */
     width: 600px;
 }
 
 .chat__wrapper { 
-    /* grid-area: 1 / 3 / 2 / 4;  */
     width: 600px;
     height: 100%;
 }
@@ -181,17 +179,6 @@ button {
     outline-width: 0;
 }
 
-* {
-    scrollbar-width: thin;
-  }
-  *::-webkit-scrollbar {
-    width: 12px;
-  }
-  *::-webkit-scrollbar-track {
-    background: #1B1D72;
-  }
-  *::-webkit-scrollbar-thumb {
-    background-color: #1B1D72;
-    border: 1px solid #1AD475;
-    z-index: 2;
-  }
+.currencies__coin--name {
+      color: #FF1494;
+}
