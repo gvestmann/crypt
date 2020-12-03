@@ -1,18 +1,22 @@
 import React, {useState, useEffect} from 'react';
 import Currency from './components/Currency';
 import News from './components/News';
+import Join from './components/Join';
+import Menu from './components/Menu';
+import './app.css';
 
 function App() {
   const [isMobile, setIsMobile] = useState(false);
-  const [visibleOnMobile, setVisibleMobile] = useState(<Currency />);
+  const [showMenu, setShowMenu] = useState(false);
+  const [visibleOnMobile, setVisibleMobile] = useState(<Join />);
 
   // Runs when component mounts
   useEffect(() => {
     console.log('In use effect');
     function updateWidth(ev) {
-      if(window.innerWidth >= 600) {
+      if(window.innerWidth >= 600 && isMobile) {
         setIsMobile(false);
-      } else {
+      } else if(window.innerWidth < 600 && !isMobile) {
         setIsMobile(true);
       }
     }
@@ -24,16 +28,23 @@ function App() {
     }
   }, []);
 
+  function handleMenuClick(ev) {
+    setShowMenu(!showMenu);
+  }
+
+  function handleComponentClick(component) {
+    setVisibleMobile(component);
+    setShowMenu(false);
+  }
+
   return (
     <div>
       {isMobile ? (
         <div>
-          <button>Menu</button>
-          <ul>
-            <li onClick={() => setVisibleMobile(<News />)}>News</li>
-            <li onClick={() => setVisibleMobile(<Currency />)}>Exhange</li>
-            <li>Chat</li>
-          </ul>
+          <button className="menu__button" onClick={handleMenuClick}>Menu</button>
+          {showMenu &&
+            <Menu setVisible={handleComponentClick} menuCloser={handleMenuClick}/>
+          }
           {
             visibleOnMobile
           }
@@ -42,6 +53,7 @@ function App() {
         <div>
           <Currency />
           <News />
+          <Join />
         </div>
       )
     }

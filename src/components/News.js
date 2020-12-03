@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 
 function News() {
   const apiBase = 'https://newsapi.org/v2/top-headlines?country=us';
-  const apiKey = 'e39c74dae24a4baa9a6db4d780671c3d';
+  const apiKey = 'OurKey';
 
   const [articles, setArticles] = useState([]);
   
@@ -16,17 +16,21 @@ function News() {
 
   const tenNews = articles.slice(0, 10);
   const newsList = tenNews.map((item, index) => {
-    return <li key={index}>{item.publishedAt} - <a href={item.url}>{item.title}</a></li>
+    const dateString = item.publishedAt;
+    const dateObj = new Date(dateString);
+    const formattedDate = `[${dateObj.getDate()}/${dateObj.getMonth() + 1}]`;
+    return <div key={index} className="news__single--wrapper"><p className="news__timestamp">{formattedDate}</p><a className="news__headline" href={item.url}>{item.title}</a></div>
   });
 
   return(
-    <div>
-      <h2>News</h2>
-      <ul>
-        {
-          newsList
-        }
-      </ul>
+    <div className="news__wrapper">
+      <div className="news__content">
+        <div className="news__news">
+          {
+            newsList
+          }
+        </div>
+      </div>
     </div>
   );
 }
