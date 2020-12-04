@@ -25,6 +25,7 @@ body {
     background-color: #1B1D72;
     color: #1AD475;
     font-family: 'Space Mono', monospace;
+    font-size: 14px;
 }
 
 main {
@@ -32,6 +33,9 @@ main {
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
+    padding-top: 1.5rem;
+    
 }
 
 main > div {
@@ -65,12 +69,18 @@ a {
     display: block
 }
 
+.stories__single--wrapper  a:hover{
+    text-decoration: underline;
+}
+
+
+
 ul {
     list-style:none;
     padding: 0;
 }
 
-button {
+/* button {
     font-family: 'Space Mono', monospace;
     color: #1AD475;
     background-color: #1B1D72;
@@ -85,7 +95,8 @@ button {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     text-align: center;
-}
+    
+} */
 
 .box {
     border: #1AD475 solid 2px;
@@ -107,7 +118,7 @@ button {
 }
 
 .stories__wrapper { 
-    width: 600px;
+    width: 50vw;
 }
 
 .stories__timestamp {
@@ -120,11 +131,12 @@ button {
 }
 
 .stories__stories {
-    width: 40vw;
+    width: 100%;
 }
 
 .stories__single--wrapper:nth-child(2) {
     margin-top: 2rem;
+    
 }
 
 .stories__single--wrapper p {
@@ -133,19 +145,20 @@ button {
 
 .stories__hide-top {
     background-color: #1B1D72;
-    width: 100%;
+    
     height: 2rem;
-    position: fixed;
+    position: absolute;
     z-index: 0;
-    width: 36vw;
+    width: 45%;
+
 }
 
 .currencies__wrapper { 
-    width: 600px;
+    width: 50vw;
 }
 
 .chat__wrapper { 
-    width: 600px;
+    width: 30vw;
     height: 100%;
 }
 
@@ -159,7 +172,10 @@ button {
     padding-top: 1rem;
     display: flex;
     align-items: baseline;
+    width: 100%;
+    
 }
+
 
 .chat__goggurinn {
     color: #FF1494;
@@ -172,7 +188,8 @@ button {
     border: none;
     margin-right: 1rem;
     margin-left: 0.2rem;
-    font-size: 16px;
+    color: #1AD475;
+    font-family:'Space Mono', monospace ;
 }
 
 .chat__input > input:focus {
