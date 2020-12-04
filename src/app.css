@@ -10,6 +10,7 @@ body {
   background-color: #1B1D72;
   color: #1AD475;
   font-family: 'Space Mono', monospace;
+  font-size: 14px;
 }
 
 .menu__button {
@@ -31,6 +32,7 @@ body {
   width: 100%;
   position: fixed;
   background-color: #1B1D72;
+  z-index: 100;
 }
 
 .menu__wrapper {
@@ -66,11 +68,40 @@ body {
 
 .news__content {
   display: flex;
+  flex-direction: column;
   height: 80vh;
   width: 90vw;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   overflow: scroll;
   border: #1AD475 solid 2px;
+}
+
+h2 {
+  display: block;
+  width: 30%;
+  margin: 0 auto;
+  background-color: #1B1D72;
+  position: absolute;
+  top: 4rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  font-weight: 400;
+  text-align: center;
+  z-index: 90;
+}
+
+.news__single--wrapper:nth-child(1) {
+  margin-top: 2.4rem;
+}
+
+.news__hide-top {
+  background-color: #1B1D72;
+  width: 84%;
+  height: 3rem;
+  position: fixed;
+  margin-top: -0.5rem;
+  z-index: 0;
 }
 
 .news__single--wrapper {
@@ -91,4 +122,24 @@ a {
 
 .news__headline {
   line-height: 24px;
+}
+
+.currency__single--wrapper {
+  display: flex;
+  margin: 1rem 0;
+  font-weight: 400;
+  justify-content: space-between;
+}
+
+.currency__single--wrapper > div {
+  width: 20%;
+}
+
+.currency__name {
+  text-transform: uppercase;
+  color: #999999;
+}
+
+.currency__headers {
+  color: #999999;
 }

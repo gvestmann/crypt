@@ -16,18 +16,38 @@ function Currency() {
 
   const top10Curs = currencyData.slice(0, 10);
   const currencyList = top10Curs.map((item) => {
-    return <tr key={item.id}><td>{item.id}</td><td>{item.volumeUsd24Hr}</td><td>{parseFloat(item.priceUsd).toFixed(2)}</td><td>{parseFloat(item.changePercent24Hr).toFixed(2)}</td></tr>
+    return <div key={item.id} className="currency__single--wrapper"><div className="currency__name">{item.id}</div><div>{'$' + parseFloat(item.priceUsd).toFixed(2)}</div><div>{(parseFloat(item.volumeUsd24Hr) / 1000000000).toFixed(3) + 'b'}</div><div>{parseFloat(item.changePercent24Hr).toFixed(2) + '%'}</div></div>
   });
   return (
+    <div className="news__wrapper">
+    <h2>EXCHANGE</h2>
+      <div className="news__content">
+        <div class="currency__hide-top"></div>
+        <div className="currencies__info">
+          <div className="currency__single--wrapper currency__headers">
+            <div></div>
+            <div>PRICE</div>
+            <div>VOLUME</div>
+            <div>CHANGE</div>
+          </div>
+          {
+            currencyList
+          }
+        </div>
+      </div>
+    </div>
+  );
+}
 
-    <React.Fragment>
-      <table>
+export default Currency;
+
+{/* <table>
         <thead>
           <tr>
             <th>Name</th>
-            <th>Age</th>
-            <th>Sex</th>
-            <th>Location</th>
+            <th>Price</th>
+            <th>Volume(24h)</th>
+            <th>Change(24h)</th>
           </tr>
         </thead>
         <tbody>
@@ -35,9 +55,4 @@ function Currency() {
             currencyList
           }
         </tbody>
-      </table>
-    </React.Fragment>
-  );
-}
-
-export default Currency;
+      </table> */}
