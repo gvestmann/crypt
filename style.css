@@ -1,3 +1,4 @@
+/* GLOBAL & GENETAL STYLE */
 * {
     margin: 0;
     padding: 0;
@@ -59,6 +60,7 @@ h2 {
     position: relative;
     top: 20px;
     font-weight: 400;
+    font-size: 24px;
     text-align: center;
     z-index: 9999;
 }
@@ -69,52 +71,15 @@ a {
     display: block
 }
 
-.stories__single--wrapper  a:hover{
-    text-decoration: underline;
-}
-
-
-
 ul {
     list-style:none;
     padding: 0;
 }
 
-/* button {
-    font-family: 'Space Mono', monospace;
-    color: #1AD475;
-    background-color: #1B1D72;
-    border-left: solid #1AD475 2px;
-    border-top: solid #1AD475 2px;
-    border-right: solid #FF1494 2px;
-    border-bottom: solid #FF1494 2px;
-    box-shadow: inset -2px -2px #1AD475;
-    position: relative;
-    padding-left: 4rem;
-    padding-right: 4rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    text-align: center;
-    
-} */
 
-.box {
-    border: #1AD475 solid 2px;
-    overflow: auto;
-    height: 40vh;
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
-
-.chat__box {
-    padding: 2rem 1rem;
-    border: #1AD475 solid 2px;
-    overflow: auto;
-    height: 85vh;    
-}
-
-.chat__user {
-    color: #FF1494;
+/* NEWS */
+.stories__single--wrapper  a:hover{
+    text-decoration: underline;
 }
 
 .stories__wrapper { 
@@ -145,16 +110,31 @@ ul {
 
 .stories__hide-top {
     background-color: #1B1D72;
-    
     height: 2rem;
     position: absolute;
     z-index: 0;
     width: 45%;
-
 }
 
-.currencies__wrapper { 
-    width: 50vw;
+.box {
+    border: #1AD475 solid 2px;
+    overflow: auto;
+    height: 40vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+
+/* CHAT */
+.chat__box {
+    padding: 2rem 1rem;
+    border: #1AD475 solid 2px;
+    overflow: auto;
+    height: 85vh;    
+}
+
+.chat__user {
+    color: #FF1494;
 }
 
 .chat__wrapper { 
@@ -173,9 +153,20 @@ ul {
     display: flex;
     align-items: baseline;
     width: 100%;
-    
 }
 
+::placeholder {
+    color:  #999999;
+    opacity: 1;
+}
+  
+:-ms-input-placeholder {
+    color:#999999;
+}
+  
+::-ms-input-placeholder {
+    color:  #999999;
+}
 
 .chat__goggurinn {
     color: #FF1494;
@@ -186,14 +177,37 @@ ul {
     background-color: #1B1D72;
     caret-color: #1AD475;
     border: none;
-    margin-right: 1rem;
-    margin-left: 0.2rem;
+    margin-left: 0.5rem;
     color: #1AD475;
-    font-family:'Space Mono', monospace ;
+    font-family:'Space Mono', monospace;
 }
 
 .chat__input > input:focus {
     outline-width: 0;
+}
+
+/* button {
+    font-family: 'Space Mono', monospace;
+    color: #1AD475;
+    background-color: #1B1D72;
+    border-left: solid #1AD475 2px;
+    border-top: solid #1AD475 2px;
+    border-right: solid #FF1494 2px;
+    border-bottom: solid #FF1494 2px;
+    box-shadow: inset -2px -2px #1AD475;
+    position: relative;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-align: center;
+    
+} */
+
+
+/* EXCHANGE */
+.currencies__wrapper { 
+    width: 50vw;
 }
 
 .currencies__coin--name {
