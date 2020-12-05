@@ -17,23 +17,20 @@ function Join() {
 
     <div className="chat__wrapper">
       <h2>CHAT</h2> 
-      
+      <div className="chat__content">
       {!loggedIn &&
-        <div className="chat__content">
+        <>
           <div className="input__wrapper">
             <p className="chat__goggurinn">{">"}</p>
-            <input placeholder="Username" autofocus type="text" onChange={(ev) => setName(ev.target.value)}></input>
+            <input placeholder="Username" autoFocus type="text" onChange={(ev) => setName(ev.target.value)} onKeyPress={(ev) => ev.key === 'Enter' ? handleLogin(ev) : null}></input>
           </div>
           <button className="chat__Btn" type="button" onClick={handleLogin}>Login</button>
-
-        </div>
+        </>
       }
       { loggedIn &&
         <Chat chatData={{name: name, room: room}}/>
-      }
-  
-
-      
+      }      
+      </div>
     </div>  
 
 

@@ -22,7 +22,7 @@ function Currency() {
     <div className="currency__wrapper">
     <h2>EXCHANGE</h2>
       <div className="currency__content">
-        <div class="currency__hide-top"></div>
+        <div className="currency__hide-top"></div>
         <div className="currencies__info">
           <div className="currency__single--wrapper currency__headers">
             <div></div>

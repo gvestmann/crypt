@@ -223,15 +223,12 @@ a {
   justify-content: flex-end;
 }
 
-
-
-
 .input__wrapper {
   display: flex;
   color: #FF1494;
   justify-content: center;
   width: 100%;
-  
+  margin-top: 1rem;
 }
 
 ::placeholder { 
@@ -244,7 +241,7 @@ a {
 }
 
 input {
-  background-color: #3e3f92;
+  background-color: #1B1D72;
   caret-color: #1AD475;
   border: none;
   margin-left: 0.5rem;
@@ -281,4 +278,9 @@ input:focus {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    height: 100%;
+}
+
+.chat__input {
+  width: 90%;
 }

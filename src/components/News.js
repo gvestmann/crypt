@@ -26,7 +26,7 @@ function News() {
     <div className="news__wrapper">
     <h2>NEWS</h2>
       <div className="news__content">
-        <div class="news__hide-top"></div>
+        <div className="news__hide-top"></div>
         <div className="news__news">
           {
             newsList
