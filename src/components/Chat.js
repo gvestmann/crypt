@@ -4,8 +4,6 @@ import io from 'socket.io-client';
 let socket;
 
 function Chat(props) {
-  const [name, setName] = useState('');
-  const [room, setRoom] = useState('');
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
   const ENDPOINT = 'localhost:5000';
@@ -24,8 +22,9 @@ function Chat(props) {
       }
     });
 
-    setName(name);
-    setRoom(room);
+    // Set the name and room state on connection
+    // setName(name);
+    // setRoom(room);
 
     // Passing the object {name: name, room: room} using the es6 syntax
     // Using the callback function in join with the error object
@@ -40,19 +39,20 @@ function Chat(props) {
 
     // This will happen on the component unmount i.e. when the user leaves the chat
     return () => {
-      socket.emit('disconnect');
+      // Bann bann að kalla á emit með disconnect skv. documentation?
+      // socket.emit('disconnect');
       // Turns the socket instance off
-      socket.off();
+      socket.disconnect();
     }
   }, [ENDPOINT, props.chatData]);
 
   // Runs at mount and each time messages update
   useEffect(() => {
     socket.on('message', (message) => {
-      setMessages([...messages, message]);
+      setMessages(messages => [...messages, message]);
     });
     //console.log('MsgsLen: ' + messages.length);
-  }, [messages]);
+  }, []);
 
   //console.log('msgs: ' + messages);
   // Function for sending messages
