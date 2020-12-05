@@ -19,9 +19,9 @@ function Currency() {
     return <div key={item.id} className="currency__single--wrapper"><div className="currency__name">{item.id}</div><div>{'$' + parseFloat(item.priceUsd).toFixed(2)}</div><div>{(parseFloat(item.volumeUsd24Hr) / 1000000000).toFixed(3) + 'b'}</div><div>{parseFloat(item.changePercent24Hr).toFixed(2) + '%'}</div></div>
   });
   return (
-    <div className="news__wrapper">
+    <div className="currency__wrapper">
     <h2>EXCHANGE</h2>
-      <div className="news__content">
+      <div className="currency__content">
         <div class="currency__hide-top"></div>
         <div className="currencies__info">
           <div className="currency__single--wrapper currency__headers">
@@ -41,18 +41,3 @@ function Currency() {
 
 export default Currency;
 
-{/* <table>
-        <thead>
-          <tr>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Volume(24h)</th>
-            <th>Change(24h)</th>
-          </tr>
-        </thead>
-        <tbody>
-          {
-            currencyList
-          }
-        </tbody>
-      </table> */}
