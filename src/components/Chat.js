@@ -68,15 +68,31 @@ function Chat(props) {
   const msgList = messages.map((msg, index) => <li key={index + msg.user}>{'[' + msg.timeStamp + '] ' + msg.user + ': ' + msg.text}</li>);
 
   return (
-    <>
-      <h1>chat</h1>
-      <p>Name: {name}, room: {room}</p>
-      <input value={message} onChange={(ev) => setMessage(ev.target.value)} onKeyPress={(ev) => ev.key === 'Enter' ? sendMessage(ev) : null} />
-      {
-        msgList
-      }
-    </>
+<div className="chat__messages">
+<ul>
+    {
+      msgList
+    }
+</ul>
+    <div className="input__wrapper">
+        <p className="chat__goggurinn">{">"}</p>
+        <input className="" value={message} onChange={(ev) => setMessage(ev.target.value)} onKeyPress={(ev) => ev.key === 'Enter' ? sendMessage(ev) : null} />
+    </div>
+</div>
   );
 }
 
 export default Chat;
+
+//  <div class="chat__messages chat__box">
+//                         <ul>
+//                             <li><span class="chat__user">14:08 [The Attorney] </span>- When the rabbit bites its tail of, I want you to throw that radio into the tub.</li>
+//                             <li><span class="chat__user">14:08 [The Attorney] </span>- Fuck, you’ve gone completely  sideways. It will blast you right through the wall. You’ll be dead in 2 seconds.</li>
+//                             <li><span class="chat__user">14:08 [The Attorney] </span>- You want me to throw this thing into the tub when White Rabbit peaks, is that it?</li>
+//                         </ul>
+//                         <div class="chat__input">
+//                             <p class="chat__goggurinn">></p>
+//                             <input placeholder=" Enter to send" type="text" autofocus/>
+//                           <!--   <button id=chat__send--button>SEND</button> -->
+//                         </div>
+//                     </div>

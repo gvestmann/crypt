@@ -217,12 +217,21 @@ a {
   justify-content: center;
 }
 
+.chat__content--after-login {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+
+
 
 .input__wrapper {
   display: flex;
   color: #FF1494;
   justify-content: center;
   width: 100%;
+  
 }
 
 ::placeholder { 
@@ -235,7 +244,7 @@ a {
 }
 
 input {
-  background-color: #1B1D72;
+  background-color: #3e3f92;
   caret-color: #1AD475;
   border: none;
   margin-left: 0.5rem;
@@ -266,5 +275,10 @@ input:focus {
   border-radius: 2px;
   margin-top: 16px;
   text-transform: uppercase;
-  
+}
+
+.chat__messages {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
 }
