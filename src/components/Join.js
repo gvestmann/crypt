@@ -24,7 +24,7 @@ function Join() {
             <p className="chat__goggurinn">{">"}</p>
             <input placeholder="Username" autoFocus type="text" onChange={(ev) => setName(ev.target.value)} onKeyPress={(ev) => ev.key === 'Enter' ? handleLogin(ev) : null}></input>
           </div>
-          <button className="chat__Btn" type="button" onClick={handleLogin}>Login</button>
+          <button className="chat__button" type="button" onClick={handleLogin}>Login</button>
         </>
       }
       { loggedIn &&

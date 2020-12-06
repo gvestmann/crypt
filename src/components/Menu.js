@@ -8,6 +8,7 @@ function Menu(props) {
     <div className="menu__overlay">
       <button onClick={() => props.menuCloser()} className="menu__button" id="close__button">Close</button>
       <div className="menu__wrapper">
+      <h2>MENU</h2>
         <ul className="menu__items">
           <li onClick={() => props.setVisible(<News />)}>- NEWS</li>
           <li onClick={() => props.setVisible(<Currency />)}>- EXCHANGE</li>

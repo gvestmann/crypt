@@ -35,6 +35,10 @@ a {
   text-decoration: none;
 }
 
+*:focus {
+  outline: none;
+}
+
 
 /* SCROLL-BAR */
 *::-webkit-scrollbar {
@@ -85,9 +89,9 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 60vh;
-  width: 80vw;
   border: #1AD475 solid 2px;
+  height: 80vh;
+  width: 90vw;
 }
 
 .menu__items {
@@ -135,7 +139,7 @@ a {
 .news__hide-top {
   background-color: #1B1D72;
   width: 84%;
-  height: 3rem;
+  height: 1rem;
   position: fixed;
   margin-top: -0.5rem;
   z-index: 0;
@@ -143,7 +147,8 @@ a {
 
 .news__single--wrapper {
   display: flex;
-  margin: 1rem 0;
+  margin-left: 0.5rem;
+  margin-top: 1rem;
 }
 
 .news__timestamp {
@@ -158,7 +163,6 @@ a {
 
 
 /* EXCHANGE */
-
 .currency__wrapper {
   display: flex;
   justify-content: center;
@@ -197,7 +201,6 @@ a {
 
 
 /* Chat*/
-
 .chat__wrapper {
   display: flex;
   justify-content: center;
@@ -248,15 +251,14 @@ input {
   color: #1AD475;
   font-family:'Space Mono', monospace;
   font-size: 1rem;
-  width: 30%;
-  
+  width: 26%;
 }
 
 input:focus {
   outline-width: 0;
 }
 
-.chat__Btn {
+.chat__button {
   font-family: 'Space Mono', monospace;
   color: #1AD475;
   background-color: #1B1D72;
@@ -279,8 +281,23 @@ input:focus {
     flex-direction: column;
     justify-content: flex-end;
     height: 100%;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 .chat__input {
   width: 90%;
+}
+
+.chat__user {
+  color: #FF1494;
+}
+
+.chat__messages li {
+  margin-top: 0.4rem;
+  list-style-type: none;
+}
+
+.chat__goggurinn {
+  margin-left: -0.6rem;
 }
