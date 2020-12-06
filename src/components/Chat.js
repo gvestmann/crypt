@@ -70,17 +70,19 @@ function Chat(props) {
   const msgList = messages.map((msg, index) => <li key={index + msg.user}><span class="chat__user">{msg.timeStamp + ' [' + msg.user + '] '}</span>{' - ' + msg.text}</li>);
 
   return (
+    <>
     <div className="chat__messages">
       <ul>
         {
           msgList
         }
       </ul>
-      <div className="input__wrapper">
-        <p className="chat__goggurinn">{">"}</p>
-        <input className="chat__input" autoFocus value={message} onChange={(ev) => setMessage(ev.target.value)} onKeyPress={(ev) => ev.key === 'Enter' ? sendMessage(ev) : null} />
-      </div>
     </div>
+          <div className="input__wrapper">
+          <p className="chat__goggurinn">{">"}</p>
+          <input className="chat__input" autoFocus value={message} onChange={(ev) => setMessage(ev.target.value)} onKeyPress={(ev) => ev.key === 'Enter' ? sendMessage(ev) : null} />
+        </div>
+    </>
   );
 }
 
