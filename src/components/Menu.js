@@ -7,6 +7,7 @@ function Menu(props) {
   return (
     <div className="menu__overlay">
       <button onClick={() => props.menuCloser()} className="menu__button" id="close__button">Close</button>
+      <img className="logo__mobile" src="https://raw.githubusercontent.com/gvestmann/crypt/master/src/images/crypt-desktop-logo.svg"></img>
       <div className="menu__wrapper">
       <h2>MENU</h2>
         <ul className="menu__items">

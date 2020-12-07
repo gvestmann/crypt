@@ -63,9 +63,11 @@ a {
 
 /* MENU */
 .menu__button {
+  font-family: 'Space Mono', monospace;
+  font-weight: 400;
   position: absolute;
   right: 1.2rem;
-  top: 1.6rem;
+  top: 1.1rem;
   font-size: 24px;
   text-transform: uppercase;
   border: none;
@@ -104,8 +106,16 @@ a {
 
 #close__button {
   position: absolute;
-  top: 1.6rem;
+  top: 1.1rem;
   right: 1.4rem;
+  font-family: 'Space Mono', monospace;
+}
+
+.logo__mobile {
+  width: 50%;
+  position: fixed;
+  top: 1.2rem;
+  left: 1.5rem;
 }
 
 
@@ -155,12 +165,6 @@ a {
   position: fixed;
   margin-top: -0.5rem;
   z-index: 0;
-}
-
-@media (min-width: 600px) {
-  .news__hide-top {
-    width: 41%;
-  }
 }
 
 .news__single--wrapper {
@@ -298,7 +302,7 @@ a {
 
 input {
   background-color: #1B1D72;
-  caret-color: #1nAD475;
+  caret-color: #1AD475;
   border: none;
   margin-left: 0.5rem;
   color: #1AD475;
@@ -363,6 +367,12 @@ input:focus {
 
 @media (min-width: 600px) {
 
+  header {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+  }
+
   h2 {
     width: 20%;
   }
@@ -393,18 +403,21 @@ input:focus {
     grid-template-areas: 
     'a c'
     'b c' ;
-    padding: 3rem 2rem;
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+    padding-left: 6rem;
+    padding-right: 6rem;
   }
 
   .currency__desktopbox {
     grid-area: b;
-    height: 40vh;
+    height: 35vh;
     position: relative;
   }
 
   .news__desktopbox {
     grid-area: a;
-    height: 40vh;
+    height: 35vh;
     position: relative;
   }
 
@@ -419,6 +432,21 @@ input:focus {
 
   .chat__messages {
     width: 90%;
+  }
+
+  .news__hide-top {
+    width: 95%;
+    position: absolute;
+    height: 1.5rem;
+  }
+
+  .currency__hide-top {
+    width: 90%;
+    position: absolute;
+    height: 1.5rem;
+    margin-top: -1rem;
+    background-color: #1B1D72;
+    z-index: 0;
   }
 }
 

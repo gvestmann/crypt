@@ -41,15 +41,20 @@ function App() {
     <div>
       {isMobile ? (
         <div>
-          <button className="menu__button" onClick={handleMenuClick}>Menu</button>
-          {showMenu &&
-            <Menu setVisible={handleComponentClick} menuCloser={handleMenuClick}/>
-          }
-          {
-            visibleOnMobile
-          }
+            <button className="menu__button" onClick={handleMenuClick}>Menu</button>
+            {showMenu &&
+              <Menu setVisible={handleComponentClick} menuCloser={handleMenuClick}/>
+            }
+            {
+              visibleOnMobile
+            }
+            <img className="logo__mobile" src="https://raw.githubusercontent.com/gvestmann/crypt/master/src/images/crypt-desktop-logo.svg"></img>
         </div>
       ) : (
+        <>
+        <header>
+          <img src="https://raw.githubusercontent.com/gvestmann/crypt/master/src/images/crypt-desktop-logo.svg"></img>
+        </header>
         <div className="desktop__wrapper">
           <div className="news__desktopbox">
             <News />
@@ -61,6 +66,7 @@ function App() {
             <Join />
           </div>
         </div>
+        </>
       )
     }
     </div>
