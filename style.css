@@ -36,7 +36,6 @@ main {
     flex-wrap: wrap;
     align-items: center;
     padding-top: 1.5rem;
-    
 }
 
 main > div {
@@ -101,7 +100,6 @@ ul {
 
 .stories__single--wrapper:nth-child(2) {
     margin-top: 2rem;
-    
 }
 
 .stories__single--wrapper p {
@@ -201,7 +199,6 @@ ul {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     text-align: center;
-    
 } */
 
 

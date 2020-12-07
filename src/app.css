@@ -163,8 +163,6 @@ a {
   }
 }
 
-
-
 .news__single--wrapper {
   display: flex;
   margin-left: 0.5rem;
@@ -210,6 +208,7 @@ a {
   .currency__content {
     height: 100%;
     width: 100%;
+    padding: 1rem 1.4rem;
   }
 }
 
@@ -283,9 +282,8 @@ a {
 }
 @media (min-width: 600px) {
   .input__wrapper {
-    height: 100%;
     align-items: center;
-    
+    margin-left: 0;
   }
 }
 
@@ -300,7 +298,7 @@ a {
 
 input {
   background-color: #1B1D72;
-  caret-color: #1AD475;
+  caret-color: #1nAD475;
   border: none;
   margin-left: 0.5rem;
   color: #1AD475;
@@ -330,9 +328,9 @@ input:focus {
   margin-top: 16px;
   text-transform: uppercase;
 }
+
 @media (min-width: 600px) {
   .chat__button{
-    bottom: 15rem;
     left: 0.5rem;
   }
 }
@@ -365,25 +363,26 @@ input:focus {
 
 @media (min-width: 600px) {
 
-  h2{
-    position: relative;
+  h2 {
     width: 20%;
-
   }
 
   #news__header{
-    top: 2.5rem;
-    /* left: 18rem; */
-
+    position: absolute;
+    top: -1rem;
+    width: 30%;
   }
+
   #exchange__header{
-    top: 28rem;
-    /* left: 11rem; */
+    position: absolute;
+    top: -1rem;
+    width: 30%;
   }
-  #chat__header{
-    top: 2.5rem;
-   /*  right: -10rem; */
 
+  #chat__header{
+    position: absolute;
+    top: -1rem;
+    width: 30%;
   }
 
   .desktop__wrapper {
@@ -394,33 +393,80 @@ input:focus {
     grid-template-areas: 
     'a c'
     'b c' ;
-
     padding: 3rem 2rem;
-    
-    
   }
 
-  .currency__desktopbox{
+  .currency__desktopbox {
     grid-area: b;
     height: 40vh;
+    position: relative;
   }
-  .news__desktopbox{
+
+  .news__desktopbox {
     grid-area: a;
     height: 40vh;
-   
+    position: relative;
   }
-  .join__desktopbox{
+
+  .join__desktopbox {
     grid-area: c;
-   /*  height: 84vh; */
+    position: relative;
   }
 
-  input{
+  input {
       width: 5rem;
-    }
+  }
 
+  .chat__messages {
+    width: 90%;
+  }
+}
 
-
-
-
-
+/* Animations */
+@keyframes fade-in {
+  from {
+  opacity: 0;
+  }
+  to {
+  opacity: 1;
+  }
+}
+  
+@keyframes color-pop {
+  0% {
+  color: #1B1D72;
+  border-color: #1B1D72;
+  }
+  40% {
+  color: #FF1494;
+  border-color: #FF1494;
+  }
+  80% {
+  color: #1AD475;
+  border-color: #1AD475;
+  }
+}
+  
+.chat__wrapper {
+  animation: fade-in;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+}
+  
+.currency__wrapper {
+  animation: fade-in;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+}
+  
+.news__wrapper {
+  animation: fade-in;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+}
+  
+.menu__wrapper {
+  animation: color-pop;
+  animation-duration: 1s;
+  animation-timing-function: linear;
 }
