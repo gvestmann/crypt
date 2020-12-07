@@ -51,11 +51,13 @@ function App() {
         </div>
       ) : (
         <div className="desktop__wrapper">
-          <div className="desktop__left-column">
-            <Currency />
+          <div className="news__desktopbox">
             <News />
+            </div>
+          <div className="currency__desktopbox">
+            <Currency />
           </div>
-          <div className="desktop__right-column">
+          <div className="join__desktopbox">
             <Join />
           </div>
         </div>
