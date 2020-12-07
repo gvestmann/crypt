@@ -246,10 +246,10 @@ a {
   height: 80vh;
   width: 90vw;
   padding: 0.5rem 0.5rem;
-  overflow: scroll;
   border: #1AD475 solid 2px;
   align-items: center;
   justify-content: center;
+  overflow: scroll;
 }
 
 @media (min-width: 600px) {
@@ -271,6 +271,7 @@ a {
   justify-content: center;
   width: 100%;
   margin-top: 1rem;
+  margin-left: 1rem;
 }
 
 ::placeholder { 
