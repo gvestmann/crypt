@@ -64,8 +64,8 @@ a {
 /* MENU */
 .menu__button {
   position: absolute;
-  right: 10px;
-  top: 10px;
+  right: 1.2rem;
+  top: 1.6rem;
   font-size: 24px;
   text-transform: uppercase;
   border: none;
@@ -104,8 +104,8 @@ a {
 
 #close__button {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 1.6rem;
+  right: 1.4rem;
 }
 
 
@@ -365,10 +365,25 @@ input:focus {
 
 @media (min-width: 600px) {
 
-
-
   h2{
-    display: none;
+    position: relative;
+    width: 20%;
+
+  }
+
+  #news__header{
+    top: 2.5rem;
+    /* left: 18rem; */
+
+  }
+  #exchange__header{
+    top: 28rem;
+    /* left: 11rem; */
+  }
+  #chat__header{
+    top: 2.5rem;
+   /*  right: -10rem; */
+
   }
 
   .desktop__wrapper {

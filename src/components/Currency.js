@@ -20,7 +20,7 @@ function Currency() {
   });
   return (
     <div className="currency__wrapper">
-    <h2>EXCHANGE</h2>
+    <h2 id="exchange__header">EXCHANGE</h2>
       <div className="currency__content">
         <div className="currency__hide-top"></div>
         <div className="currencies__info">

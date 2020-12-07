@@ -24,7 +24,7 @@ function News() {
 
   return(
     <div className="news__wrapper">
-    <h2>NEWS</h2>
+    <h2 id="news__header">NEWS</h2>
       <div className="news__content">
         <div className="news__hide-top"></div>
         <div className="news__news">

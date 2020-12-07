@@ -14,7 +14,7 @@ function Join() {
 
   return(
     <div className="chat__wrapper">
-      <h2>CHAT</h2> 
+      <h2 id="chat__header">CHAT</h2> 
       <div className="chat__content">
       {!loggedIn &&
         <>
