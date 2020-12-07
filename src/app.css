@@ -157,6 +157,12 @@ a {
   z-index: 0;
 }
 
+@media (min-width: 600px) {
+  .news__hide-top {
+    width: 41%;
+  }
+}
+
 
 
 .news__single--wrapper {
@@ -278,6 +284,7 @@ a {
 @media (min-width: 600px) {
   .input__wrapper {
     height: 100%;
+    align-items: center;
     
   }
 }
@@ -323,6 +330,12 @@ input:focus {
   margin-top: 16px;
   text-transform: uppercase;
 }
+@media (min-width: 600px) {
+  .chat__button{
+    bottom: 15rem;
+    left: 0.5rem;
+  }
+}
 
 .chat__messages {
     display: flex;
@@ -363,10 +376,13 @@ input:focus {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
     gap: 2rem;
-
     grid-template-areas: 
     'a c'
     'b c' ;
+
+    padding: 3rem 2rem;
+    
+    
   }
 
   .currency__desktopbox{
@@ -380,9 +396,12 @@ input:focus {
   }
   .join__desktopbox{
     grid-area: c;
-    height: 80vh;
+   /*  height: 84vh; */
   }
 
+  input{
+      width: 5rem;
+    }
 
 
 
