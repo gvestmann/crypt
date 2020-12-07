@@ -8,7 +8,7 @@ import './app.css';
 function App() {
   const [isMobile, setIsMobile] = useState(false);
   const [showMenu, setShowMenu] = useState(false);
-  const [visibleOnMobile, setVisibleMobile] = useState(<Join />);
+  const [visibleOnMobile, setVisibleMobile] = useState(<News />);
 
   // Runs when component mounts
   useEffect(() => {
@@ -50,10 +50,14 @@ function App() {
           }
         </div>
       ) : (
-        <div>
-          <Currency />
-          <News />
-          <Join />
+        <div className="desktop__wrapper">
+          <div>
+            <Currency />
+            <News />
+          </div>
+          <div>
+            <Join />
+          </div>
         </div>
       )
     }

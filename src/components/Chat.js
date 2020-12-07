@@ -6,6 +6,7 @@ let socket;
 function Chat(props) {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
+  const [userList, setUserList] = useState([]);
   const ENDPOINT = 'localhost:5000';
 
   // Retrieve data that the users entered when joining
@@ -67,20 +68,22 @@ function Chat(props) {
   }
 
   //console.log(message, messages);
-  const msgList = messages.map((msg, index) => <li key={index + msg.user}><span class="chat__user">{msg.timeStamp + ' [' + msg.user + '] '}</span>{' - ' + msg.text}</li>);
+  const msgList = messages.map((msg, index) => <li key={index + msg.user}><span className="chat__user">{msg.timeStamp + ' [' + msg.user + '] '}</span>{' - ' + msg.text}</li>);
 
   return (
-    <div className="chat__messages">
-      <ul>
-        {
-          msgList
-        }
-      </ul>
-      <div className="input__wrapper">
-        <p className="chat__goggurinn">{">"}</p>
-        <input className="chat__input" autoFocus value={message} onChange={(ev) => setMessage(ev.target.value)} onKeyPress={(ev) => ev.key === 'Enter' ? sendMessage(ev) : null} />
+    <>
+      <div className="chat__messages">
+        <ul>
+          {
+            msgList
+          }
+        </ul>
+        <div className="input__wrapper">
+          <p className="chat__goggurinn">{">"}</p>
+          <input className="chat__input" autoFocus value={message} onChange={(ev) => setMessage(ev.target.value)} onKeyPress={(ev) => ev.key === 'Enter' ? sendMessage(ev) : null} />
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

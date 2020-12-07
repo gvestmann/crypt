@@ -12,9 +12,7 @@ function Join() {
     }
   }
 
-
   return(
-
     <div className="chat__wrapper">
       <h2>CHAT</h2> 
       <div className="chat__content">
@@ -31,26 +29,7 @@ function Join() {
         <Chat chatData={{name: name, room: room}}/>
       }      
       </div>
-    </div>  
-
-
-    // <div className="join__wrapper">
-    // <h2>EXCHANGE</h2>
-    //   <div className="currency__content">
-    //     <div class="currency__hide-top"></div>
-    //     <div className="currencies__info">
-    //       <div className="currency__single--wrapper currency__headers">
-    //         <div></div>
-    //         <div>PRICE</div>
-    //         <div>VOLUME</div>
-    //         <div>CHANGE</div>
-    //       </div>
-    //       {
-    //         currencyList
-    //       }
-    //     </div>
-    //   </div>
-    // </div>  
+    </div>
   );
 }
 
