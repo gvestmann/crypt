@@ -6,7 +6,7 @@ let socket;
 function Chat(props) {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const ENDPOINT = 'localhost:5000';
+  const ENDPOINT = 'https://react-crypt-chat.herokuapp.com/';
 
   // Retrieve data that the users entered when joining
   useEffect(() => {
