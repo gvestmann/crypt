@@ -10,7 +10,12 @@ function News() {
     const apiUrl = `${apiBase}&apiKey=${apiKey}`;
 
     fetch(apiUrl)
-    .then((res) => res.json())
+    .then((res) => {
+      if(!res.ok) {
+        throw Error(res.statusText + ' - ' + res.url);
+      }
+      return res.json()
+    })
     .then((data) => setArticles(data.articles))
     .catch((error) => console.log('Error: ' + error));
   }, []);
