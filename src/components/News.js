@@ -11,7 +11,8 @@ function News() {
 
     fetch(apiUrl)
     .then((res) => res.json())
-    .then((data) => setArticles(data.articles));
+    .then((data) => setArticles(data.articles))
+    .catch((error) => console.log('Error: ' + error));
   }, []);
 
   const tenNews = articles.slice(0, 10);
