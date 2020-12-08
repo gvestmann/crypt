@@ -18,7 +18,7 @@ function News() {
   const newsList = tenNews.map((item, index) => {
     const dateString = item.publishedAt;
     const dateObj = new Date(dateString);
-    const formattedDate = `[${dateObj.getDate()}/${dateObj.getMonth() + 1}]`;
+    const formattedDate = `[${("0" + dateObj.getDate()).slice(-2)}/${("0" + (dateObj.getMonth() + 1)).slice(-2)}]`;
     return <div key={index} className="news__single--wrapper"><p className="news__timestamp">{formattedDate}</p><a className="news__headline" href={item.url}>{item.title}</a></div>
   });
 

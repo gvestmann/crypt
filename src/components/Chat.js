@@ -6,7 +6,6 @@ let socket;
 function Chat(props) {
   const [message, setMessage] = useState('');
   const [messages, setMessages] = useState([]);
-  const [userList, setUserList] = useState([]);
   const ENDPOINT = 'localhost:5000';
 
   // Retrieve data that the users entered when joining
@@ -33,8 +32,8 @@ function Chat(props) {
     socket.emit('join', { name, room }, (obj) => {
       // Alert error if error callback
       if(obj !== undefined) {
-        alert(obj.error);
-        return;
+        //alert(obj.error);
+        props.setLogin(obj.error);
       }
     });
 
@@ -43,7 +42,7 @@ function Chat(props) {
       // Bann bann að kalla á emit með disconnect skv. documentation?
       // socket.emit('disconnect');
       // Turns the socket instance off
-      socket.disconnect();
+      // socket.disconnect();
     }
   }, [ENDPOINT, props.chatData]);
 
@@ -59,7 +58,7 @@ function Chat(props) {
   // Function for sending messages
   function sendMessage(ev) {
     ev.preventDefault();
-    const messageSent = `${new Date().getHours()}:${new Date().getMinutes()}`;
+    const messageSent = `${( "0" + (new Date().getHours())).slice(-2)}:${("0" + (new Date().getMinutes())).slice(-2)}`;
     const messageObj = {text: message, timeStamp: messageSent};
 
     if(message) {

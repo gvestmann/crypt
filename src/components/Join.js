@@ -12,6 +12,11 @@ function Join() {
     }
   }
 
+  function handleInvalidName(err) {
+    setLoggedIn(false);
+    alert(err);
+  }
+
   return(
     <div className="chat__wrapper">
       <h2 id="chat__header">CHAT</h2> 
@@ -26,7 +31,7 @@ function Join() {
         </>
       }
       { loggedIn &&
-        <Chat chatData={{name: name, room: room}}/>
+        <Chat chatData={{name: name, room: room}} setLogin={handleInvalidName}/>
       }      
       </div>
     </div>
