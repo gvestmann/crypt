@@ -16,7 +16,7 @@ function Currency() {
 
   const top10Curs = currencyData.slice(0, 10);
   const currencyList = top10Curs.map((item) => {
-    return <div key={item.id} className="currency__single--wrapper"><div className="currency__name">{item.id}</div><div>{'$' + parseFloat(item.priceUsd).toFixed(2)}</div><div>{(parseFloat(item.volumeUsd24Hr) / 1000000000).toFixed(3) + 'b'}</div><div>{parseFloat(item.changePercent24Hr).toFixed(2) + '%'}</div></div>
+    return <div key={item.id} className="currency__single--wrapper"><div className="currency__name">{'[' + item.id + ']'}</div><div className="currency__price">{'$' + parseFloat(item.priceUsd).toFixed(2)}</div><div className="currency__volume">{(parseFloat(item.volumeUsd24Hr) / 1000000000).toFixed(3) + 'b'}</div><div>{parseFloat(item.changePercent24Hr).toFixed(2) + '%'}</div></div>
   });
   return (
     <div className="currency__wrapper">
