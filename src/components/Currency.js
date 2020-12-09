@@ -21,7 +21,7 @@ function Currency() {
     if(change < 0) {
       changeDiv = <div className="negative__change">{change + '%'}</ div>;
     } else {
-      changeDiv = <div className="positive__change">{change + '%'}</div>;
+      changeDiv = <div className="positive__change">{'+' + change + '%'}</div>;
     }
   return <div key={item.id} className="currency__single--wrapper"><div className="currency__name">{'['+item.id+']'}</div><div className="currency__price">{'$' + parseFloat(item.priceUsd).toFixed(2)}</div><div className="currency__volume">{(parseFloat(item.volumeUsd24Hr) / 1000000000).toFixed(3) + 'b'}</div>{changeDiv}</div>
   });
@@ -32,7 +32,7 @@ function Currency() {
         <div className="currency__hide-top"></div>
         <div className="currencies__info">
           <div className="currency__single--wrapper currency__headers">
-            <div></div>
+            <div className="currency__space"></div>
             <div>PRICE</div>
             <div>VOLUME</div>
             <div>CHANGE</div>

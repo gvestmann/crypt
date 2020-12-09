@@ -228,7 +228,12 @@ a {
   width: 20%;
 }
 
+.currency__space {
+  width: 30% !important;
+}
+
 .currency__name {
+  width: 30% !important;
   text-transform: uppercase;
   color: #1AD475;
 }

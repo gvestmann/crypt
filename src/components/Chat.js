@@ -79,7 +79,7 @@ function Chat(props) {
         </ul>
         <div className="input__wrapper">
           <p className="chat__goggurinn">{">"}</p>
-          <input className="chat__input" autoFocus value={message} onChange={(ev) => setMessage(ev.target.value)} onKeyPress={(ev) => ev.key === 'Enter' ? sendMessage(ev) : null} />
+          <input className="chat__input" value={message} onChange={(ev) => setMessage(ev.target.value)} onKeyPress={(ev) => ev.key === 'Enter' ? sendMessage(ev) : null} />
         </div>
       </div>
     </>

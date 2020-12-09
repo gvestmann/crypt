@@ -48,7 +48,6 @@ function App() {
             {
               visibleOnMobile
             }
-            <img className="logo__mobile" src="https://raw.githubusercontent.com/gvestmann/crypt/master/src/images/crypt-desktop-logo.svg"></img>
         </div>
       ) : (
         <>
