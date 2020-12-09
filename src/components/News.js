@@ -1,13 +1,13 @@
 import React, {useState, useEffect} from 'react';
 
 function News() {
-  const apiBase = 'https://newsapi.org/v2/everything?q=cryptocurrency&sortBy=popularity&sortBy=publishedAt';
-  const apiKey = 'e39c74dae24a4baa9a6db4d780671c3d';
+  const apiBase = 'https://gnews.io/api/v4/search?q=cryptocurrency&token=d72809c66bef97f9480c85489e2edc45&lang=en';
+  //const apiKey = 'd72809c66bef97f9480c85489e2edc45';
 
   const [articles, setArticles] = useState([]);
   
   useEffect(() => {
-    const apiUrl = `${apiBase}&apiKey=${apiKey}`;
+    const apiUrl = apiBase;
 
     fetch(apiUrl)
     .then((res) => {
@@ -20,7 +20,7 @@ function News() {
     .catch((error) => console.log('Error: ' + error));
   }, []);
 
-  const tenNews = articles.slice(0, 10);
+  const tenNews = articles;
   const newsList = tenNews.map((item, index) => {
     const dateString = item.publishedAt;
     const dateObj = new Date(dateString);
