@@ -9,8 +9,14 @@ function Currency() {
   useEffect(() => {
 
     fetch(api)
-    .then(res => res.json())
-    .then((data) => setCurrencyData(data.data));
+    .then(res => {
+      if(!res.ok) {
+        throw Error(res.statusText + ' - ' + res.url);
+      }
+      return res.json()
+    })
+    .then((data) => setCurrencyData(data.data))
+    .catch((error) => console.log('Error: ' + error));
 
   }, []);
 

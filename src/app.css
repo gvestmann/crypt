@@ -21,7 +21,6 @@ h2 {
   margin: 0 auto;
   background-color: #1B1D72;
   position: absolute;
-  /* Ari breytti header i minna top */
   top: 4.2rem;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -40,11 +39,13 @@ a {
   outline: none;
 }
 
+
 /* SCROLL-BAR */
 *::-webkit-scrollbar {
   width: 10px;
   color: #1AD475;
 }
+
 *::-webkit-scrollbar-track {
   background: #1B1D72;
   margin-top: 10px;
@@ -94,6 +95,9 @@ a {
   border: #1AD475 solid 2px;
   height: 80vh;
   width: 90vw;
+  animation: color-pop;
+  animation-duration: 1s;
+  animation-timing-function: linear;
 }
 
 .menu__items {
@@ -126,12 +130,9 @@ a {
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-
-@media (min-width: 600px) {
-  .news__wrapper {
-    height: 100%;
-  }
+  animation: fade-in;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
 }
 
 .news__content {
@@ -144,18 +145,11 @@ a {
   border: #1AD475 solid 2px;
 }
 
-@media (min-width: 600px) {
-  .news__content {
-    height: 100%;
-    width: 100%;
-  }
-}
-
 .news__single--wrapper:nth-child(1) {
   margin-top: 2.4rem;
 }
 
-.news__single--wrapper  a:hover{
+.news__single--wrapper  a:hover {
   text-decoration: underline;
 }
 
@@ -193,12 +187,6 @@ a {
   height: 100vh;
 }
 
-@media (min-width: 600px) {
-  .currency__wrapper {
-    height: 100%;
-  }
-}
-
 .currency__content {
   display: flex;
   flex-direction: column;
@@ -207,14 +195,6 @@ a {
   padding: 0.5rem 0.5rem;
   overflow: scroll;
   border: #1AD475 solid 2px;
-}
-
-@media (min-width: 600px) {
-  .currency__content {
-    height: 100%;
-    width: 100%;
-    padding: 1rem 1.4rem;
-  }
 }
 
 .currency__single--wrapper {
@@ -238,14 +218,20 @@ a {
   color: #1AD475;
 }
 
-.currency__price{
-  color: #999999;
-}
-.currency__volume{
+.currency__price {
   color: #999999;
 }
 
+.currency__volume {
+  color: #999999;
+}
 
+.negative__change {
+  color: #FF1494;
+}
+.positive__change {
+  color: #1AD475;
+}
 
 
 /* Chat*/
@@ -254,12 +240,9 @@ a {
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-
-@media (min-width: 600px) {
-  .chat__wrapper {
-    height:100%;
-  }
+  animation: fade-in;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
 }
 
 .chat__content {
@@ -286,18 +269,6 @@ a {
   overflow: scroll;
 }
 
-@media (min-width: 600px) {
-  .chat__content {
-    height: 100%;
-    width: 100%;
-  }
-  .chat__content__reverse {
-    height: 100%;
-    width: 100%;
-  }
-}
-
-/* Má deleta? */
 .chat__content--after-login {
   display: flex;
   flex-direction: column;
@@ -307,16 +278,7 @@ a {
 .input__wrapper {
   display: flex;
   color: #FF1494;
-  /* justify-content: center;  Ari */
-  /* width: 100%;  Ari*/
   margin-top: 1rem;
-  /* margin-left: 1rem; Ari*/
-}
-@media (min-width: 600px) {
-  .input__wrapper {
-    align-items: center;
-    /* margin-left: 0; Ari */
-  }
 }
 
 ::placeholder { 
@@ -336,7 +298,6 @@ input {
   color: #1AD475;
   font-family:'Space Mono', monospace;
   font-size: 1rem;
-  /* ARI  breytti WIDTH */
   width: 6rem;
 }
 
@@ -362,12 +323,6 @@ input:focus {
   text-transform: uppercase;
 }
 
-@media (min-width: 600px) {
-  .chat__button{
-    /* left: 0.5rem; Ari */
-  }
-}
-
 .chat__messages {
     display: flex;
     flex-direction: column;
@@ -376,7 +331,6 @@ input:focus {
     margin-left: 1rem;
     margin-right: 1rem;
 }
-
 
 .chat__input {
   width: 90%;
@@ -393,12 +347,10 @@ input:focus {
 }
 
 
-.chat__goggurinn {
-  /* margin-left: -0.8rem; Ari */
-}
-
+/* DESKTOP SPECIFIC STYLES */
 @media (min-width: 600px) {
 
+  /* GLOBAL STYLES */
   header {
     display: flex;
     justify-content: center;
@@ -409,28 +361,10 @@ input:focus {
     width: 20%;
   }
 
-  #news__header{
-    position: absolute;
-    top: -1rem;
-    width: 30%;
-  }
-
-  #exchange__header{
-    position: absolute;
-    top: -1rem;
-    width: 30%;
-  }
-
-  #chat__header{
-    position: absolute;
-    top: -1rem;
-    width: 30%;
-  }
-
   .desktop__wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50% 50%;/* Ari */
+    grid-template-rows: 50% 50%;
     gap: 2rem;
     grid-template-areas: 
     'a c'
@@ -439,41 +373,51 @@ input:focus {
     padding-bottom: 4rem;
     padding-left: 6rem;
     padding-right: 6rem;
-    height: 80vh;/* Ari */
+    height: 80vh;
     word-wrap: break-word;
   }
 
-  .currency__desktopbox {
-    grid-area: b;
-    height: 100%;/* Ari */
-    position: relative;
+
+  /* NEWS */
+  #news__header {
+    position: absolute;
+    top: -1rem;
+    width: 30%;
   }
 
   .news__desktopbox {
     grid-area: a;
-    height: 100%;/* Ari */
+    height: 100%;
     position: relative;
-  }
-
-  .join__desktopbox {
-    grid-area: c;
-    position: relative;
-    height: 100%;/* Ari */
-  }
-
-  /* Ari
-  input {
-      width: 5rem;
-  } */
-
-  .chat__messages {
-    width: 90%;
   }
 
   .news__hide-top {
     width: 95%;
     position: absolute;
     height: 1.5rem;
+  }
+
+  .news__wrapper {
+    height: 100%;
+  }
+
+  .news__content {
+    height: 100%;
+    width: 100%;
+  }
+
+
+  /* CURRENCY */
+  #exchange__header {
+    position: absolute;
+    top: -1rem;
+    width: 30%;
+  }
+
+  .currency__desktopbox {
+    grid-area: b;
+    height: 100%;
+    position: relative;
   }
 
   .currency__hide-top {
@@ -485,6 +429,37 @@ input:focus {
     z-index: 0;
   }
 
+  .currency__wrapper {
+    height: 100%;
+    animation: fade-in;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+  }
+
+  .currency__content {
+    height: 100%;
+    width: 100%;
+    padding: 1rem 1.4rem;
+  }
+
+
+  /* CHAT */
+  #chat__header {
+    position: absolute;
+    top: -1rem;
+    width: 30%;
+  }
+
+  .join__desktopbox {
+    grid-area: c;
+    position: relative;
+    height: 100%;
+  }
+
+  .chat__messages {
+    width: 90%;
+  }
+
   .chat__hide-top {
     background-color: #1B1D72;
     width: 38%;
@@ -494,9 +469,27 @@ input:focus {
     margin-top: -0.5rem;
     z-index: 0;
   }
+
+  .chat__wrapper {
+    height:100%;
+  }
+
+  .chat__content {
+    height: 100%;
+    width: 100%;
+  }
+  .chat__content__reverse {
+    height: 100%;
+    width: 100%;
+  }
+
+  .input__wrapper {
+    align-items: center;
+  }
 }
 
-/* Animations */
+
+/* ANIMATIONS */
 @keyframes fade-in {
   from {
   opacity: 0;
@@ -519,36 +512,4 @@ input:focus {
   color: #1AD475;
   border-color: #1AD475;
   }
-}
-  
-.chat__wrapper {
-  animation: fade-in;
-  animation-duration: 1.5s;
-  animation-timing-function: linear;
-}
-  
-.currency__wrapper {
-  animation: fade-in;
-  animation-duration: 1.5s;
-  animation-timing-function: linear;
-}
-  
-.news__wrapper {
-  animation: fade-in;
-  animation-duration: 1.5s;
-  animation-timing-function: linear;
-}
-  
-.menu__wrapper {
-  animation: color-pop;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-}
-
-
-.negative__change {
-  color: #FF1494;
-}
-.positive__change {
-  color: #1AD475;
 }

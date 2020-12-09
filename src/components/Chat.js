@@ -14,17 +14,13 @@ function Chat(props) {
     //const {name, room} = queryString.parse(props.location.search);
     const {name, room} = props.chatData;
     // We can emit different events using this instance of socket
-    // Header added for the cors block error....
+    // Header added for the cors blocked error....
     socket = io(ENDPOINT, {
       withCredentials: true,
       extraHeaders: {
         'my-custom-header': 'abcd'
       }
     });
-
-    // Set the name and room state on connection
-    // setName(name);
-    // setRoom(room);
 
     // Passing the object {name: name, room: room} using the es6 syntax
     // Using the callback function in join with the error object
@@ -46,12 +42,11 @@ function Chat(props) {
     }
   }, [ENDPOINT, props.chatData]);
 
-  // Runs at mount and each time messages update
+  // Runs at mount and awaits for 'message' event from the server
   useEffect(() => {
     socket.on('message', (message) => {
       setMessages(messages => [...messages, message]);
     });
-    //console.log('MsgsLen: ' + messages.length);
   }, []);
 
   //console.log('msgs: ' + messages);
@@ -62,7 +57,9 @@ function Chat(props) {
     const messageObj = {text: message, timeStamp: messageSent};
 
     if(message) {
+
       socket.emit('sendMessage', messageObj, () => setMessage('')); // Last parameter is the callback that is called in the server 'sendMessage' event and once its called message is set to ''
+    
     }
   }
 
