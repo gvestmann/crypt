@@ -274,16 +274,6 @@ a {
   overflow: scroll;
 }
 
-.chat__hide-top {
-  background-color:#1B1D72;
-  width: 85%;
-  height: 1rem;
-  position: fixed;
-  top:5.2rem;
-  margin-top: 0;
-  z-index: 0;
-}
-
 .chat__content__reverse {
   display: flex;
   flex-direction: column-reverse;
