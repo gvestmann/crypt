@@ -4,12 +4,14 @@
 ## For installation clone the repo and in the command line, run:
 
  ```bash
- npm install```
+ npm install
+ ```
 
  or with yarn:
 
   ```bash
- yarn```
+ yarn
+ ```
 
  and then to start the server run: 
 
