@@ -22,7 +22,6 @@ function Join() {
       <h2 id="chat__header">CHAT</h2> 
       {!loggedIn &&
         <div className="chat__content">
-          <div className="chat__hide-top"> </div>
           <div className="input__wrapper">
             <p className="chat__goggurinn">{">"}</p>
             <input placeholder="Username" type="text" onChange={(ev) => setName(ev.target.value)} onKeyPress={(ev) => ev.key === 'Enter' ? handleLogin(ev) : null}></input>
@@ -32,6 +31,7 @@ function Join() {
       }
       { loggedIn &&
         <div className="chat__content__reverse">
+          <div className="chat__hide-top"></div>
           <Chat chatData={{name: name, room: room}} setLogin={handleInvalidName}/>
         </div>
       }
