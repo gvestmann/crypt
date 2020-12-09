@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 
 function News() {
-  const apiBase = 'https://gnews.io/api/v4/search?q=cryptocurrency&token=d72809c66bef97f9480c85489e2edc45&lang=en';
+  const apiBase = 'http://newsapi.org/v2/everything?q=cryptocurrency&sortBy=popularity&sortBy=publishedAt';
   //const apiKey = 'd72809c66bef97f9480c85489e2edc45';
 
   const [articles, setArticles] = useState([]);
