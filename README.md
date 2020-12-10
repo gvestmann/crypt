@@ -1,7 +1,27 @@
-# Crypt of Currency
-## A crypto currency dashboard with a community chat room. 
+# CRYPT OF CURRENCY
+## Dashboard for Cryptocurrency miners
 
-### For installation clone the repo and in the command line, run:
+Check out the [LIVE VERSION!](https://thecrypt.netlify.com)
+
+ ## INTRODUCTION
+
+ This single page application is dedicated to cryptocurrencies. It feature the latest crypto-related news, current exchange prices for the 10 most popular coins, and a chat for all crypto-related sharing. 
+
+ ## TEAM
+
+ The app was designed and developed by the fantastic team of:
+* [Myself](https://github.com/gvestmann),
+* [Ari](https://github.com/Aridaniel), 
+* [Daniel Bergmann](https://github.com/daniel-bergmann), and
+* [Jóhann](https://github.com/johannTor), 
+
+### INSTALLATION
+
+Begin by cloning this repo. 
+
+Then, clone the [server's repo](https://github.com/johannTor/crypt_chat_server).
+
+For **both** folders you'll have to  fire up terminal and run ...
 
  ```bash
  npm install
@@ -13,7 +33,7 @@
  yarn
  ```
 
- and then to start the server run: 
+ and then start the server with:
 
  ```bash
  npm start
@@ -25,40 +45,8 @@
  yarn start
  ```
 
- ## Introduction
+ ## CODE & TECH
 
- Our single-page application is dedicated to Crypto- currencies. It will feature latest crypto-related news, current prices for Top 10 coins and a chat for all crypto-related sharing. 
+**Crypt of Currency** is built with React. It uses [GNews.io's API](https://gnews.io) and [CoinCap.io's API](https://coincap.io) for info. It relies on [Socket.io](https://socket.io) for the chat function.
 
- The app was designed and developed by [Jóhann](https://github.com/johannTor), [Guðmundur](https://github.com/gvestmann), [Ari](https://github.com/Aridaniel) and [Daniel Bergmann](https://github.com/daniel-bergmann) 
-
- ## Design and Code
-
- The app was designed in organized design sprints and the UI was made in Figma.
-
- When the design was final we started building the app in ReactJS.
-
- In the development process we utilized awesome technology such as:
- 
- CSS
- ReactJS
- Node.js
- Express
- Socket.io
- Fetch API
- CoinCap.io
- GNews.io
-
- For Deployment we utilized:
- Heroku
- Netlify
- 
-
- 
-
-
-
-
-
-
-
-
+The site is styled with plain CSS. It's hosted and deployed with [Netlify](https://netlify.app), but our server is on [Heroku](https://www.heroku.com). 
