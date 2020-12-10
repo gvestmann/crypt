@@ -1,5 +1,4 @@
-# CRYPT OF CURRENCY
-## Dashboard for Cryptocurrency miners
+# CRYPT OF CURRENCY - Dashboard
 
 Check out the [LIVE VERSION!](https://thecrypt.netlify.com)
 
@@ -11,15 +10,17 @@ Check out the [LIVE VERSION!](https://thecrypt.netlify.com)
 
  The app was designed and developed by the fantastic team of:
 * [Myself](https://github.com/gvestmann),
-* [Ari](https://github.com/Aridaniel), 
+* [Ari Agnarsson](https://github.com/Aridaniel), 
 * [Daniel Bergmann](https://github.com/daniel-bergmann), and
-* [Jóhann](https://github.com/johannTor), 
+* [Jóhann Þorvaldsson](https://github.com/johannTor). 
 
-### INSTALLATION
+## INSTALLATION
 
-Begin by cloning this repo. 
+Begin by cloning this project's repo.
+
 
 Then, clone the [server's repo](https://github.com/johannTor/crypt_chat_server).
+
 
 For **both** folders you'll have to  fire up terminal and run ...
 
@@ -33,7 +34,7 @@ For **both** folders you'll have to  fire up terminal and run ...
  yarn
  ```
 
- and then start the server with:
+Once that's done, start the servers. And remember, in **both** folders.
 
  ```bash
  npm start
