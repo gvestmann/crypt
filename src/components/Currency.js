@@ -5,9 +5,7 @@ const api = 'https://api.coincap.io/v2/assets';
 function Currency() {
   const [currencyData, setCurrencyData] = useState([]);
 
-
   useEffect(() => {
-
     fetch(api)
     .then(res => {
       if(!res.ok) {
@@ -17,20 +15,23 @@ function Currency() {
     })
     .then((data) => setCurrencyData(data.data))
     .catch((error) => console.log('Error: ' + error));
-
   }, []);
 
   const top10Curs = currencyData.slice(0, 10);
+
   const currencyList = top10Curs.map((item) => {
     const change = parseFloat(item.changePercent24Hr).toFixed(2);
     let changeDiv;
+
     if(change < 0) {
       changeDiv = <div className="negative__change">{change + '%'}</ div>;
     } else {
       changeDiv = <div className="positive__change">{'+' + change + '%'}</div>;
     }
-  return <div key={item.id} className="currency__single--wrapper"><div className="currency__name">{'['+item.id+']'}</div><div className="currency__price">{'$' + parseFloat(item.priceUsd).toFixed(2)}</div><div className="currency__volume">{(parseFloat(item.volumeUsd24Hr) / 1000000000).toFixed(3) + 'b'}</div>{changeDiv}</div>
+
+    return <div key={item.id} className="currency__single--wrapper"><div className="currency__name">{'['+item.id+']'}</div><div className="currency__price">{'$' + parseFloat(item.priceUsd).toFixed(2)}</div><div className="currency__volume">{(parseFloat(item.volumeUsd24Hr) / 1000000000).toFixed(3) + 'b'}</div>{changeDiv}</div>
   });
+
   return (
     <div className="currency__wrapper">
     <h2 id="exchange__header">EXCHANGE</h2>
@@ -53,4 +54,3 @@ function Currency() {
 }
 
 export default Currency;
-

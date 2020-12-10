@@ -10,7 +10,6 @@ function App() {
   const [showMenu, setShowMenu] = useState(false);
   const [visibleOnMobile, setVisibleMobile] = useState(<News />);
 
-  // Runs when component mounts
   useEffect(() => {
     console.log('In use effect');
     function updateWidth(ev) {

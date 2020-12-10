@@ -2,6 +2,8 @@
 
 Check out the [LIVE VERSION!](https://thecrypt.netlify.com)
 
+**PRO TIP:** Open up the website in two different tabs and have a chat with yourself. It's way more fun!
+
  ## INTRODUCTION
 
  This single page application is dedicated to cryptocurrencies. It feature the latest crypto-related news, current exchange prices for the 10 most popular coins, and a chat for all crypto-related sharing. 
